@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>WIC Eligibility Screener</title>
+    <meta name="description" content="WIC Eligibility Screener — a preliminary screening tool for the West Virginia WIC Program." />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="WIC Eligibility Screener" />
+    <meta property="og:description" content="WIC Eligibility Screener — a preliminary screening tool for the West Virginia WIC Program." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="header-brand">
+          <img src="wic-logo.jpg" alt="WIC logo" class="logo-wic" />
+          <h1 id="app-title" class="app-title"></h1>
+        </div>
+        <div class="header-right">
+          <img src="by-your-side-logo.png" alt="By Your Side — pregnancy to 5" class="logo-bys header-bys" />
+          <div class="lang-toggle" role="group" aria-label="Language">
+            <button type="button" id="lang-en" class="lang-btn">EN</button>
+            <button type="button" id="lang-es" class="lang-btn">ES</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="card">
+        <div id="progress-wrap" class="progress-wrap">
+          <div class="progress-meta">
+            <span id="progress-step"></span>
+            <span id="progress-percent"></span>
+          </div>
+          <div class="progress-track"><div id="progress-bar" class="progress-bar"></div></div>
+        </div>
+
+        <div class="card-content">
+          <div id="step-container"></div>
+
+          <div id="nav" class="nav">
+            <div id="nav-back-slot"></div>
+            <button type="button" id="btn-next" class="btn btn-primary btn-lg"></button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p id="footer-text"></p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

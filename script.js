@@ -93,7 +93,6 @@ const TRANSLATIONS = {
       { id: "snap", label: "SNAP (food stamps)" },
       { id: "medicaid", label: "Medicaid or CHIP" },
       { id: "tanf", label: "WV WORKS (TANF)" },
-      { id: "fdpir", label: "FDPIR (Food Distribution Program on Indian Reservations)" },
       { id: "foster", label: "Foster child" },
       { id: "none", label: "None of the above" },
     ],

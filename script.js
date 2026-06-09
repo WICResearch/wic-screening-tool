@@ -174,7 +174,7 @@ const TRANSLATIONS = {
     benefits: [
       { id: "snap", label: "SNAP (cupones de alimentos)" },
       { id: "medicaid", label: "Medicaid o CHIP" },
-      { id: "tanf", label: "TANF (Asistencia Temporal para Familias Necesitadas)" },
+      { id: "tanf", label: "WV WORKS TANF (Asistencia Temporal para Familias Necesitadas)" },
       { id: "fdpir", label: "FDPIR (Programa de Distribución de Alimentos en Reservas Indígenas)" },
       { id: "none", label: "Ninguno de los anteriores" },
     ],

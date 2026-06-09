@@ -381,7 +381,7 @@ function renderResult() {
 
     <div class="summary">
       <div class="summary-top">
-        <div class="brand"><img src="wic-logo.jpg" alt="WIC logo" /><span>${esc(tt.appTitle)}</span></div>
+        <div class="brand"><img src="wic logo .png"alt="WIC logo" /><span>${esc(tt.appTitle)}</span></div>
         <span class="summary-date">${esc(sd.screenedAt)}</span>
       </div>
       <div class="summary-verdict ${isEligible ? "eligible" : "ineligible"}">${esc(isEligible ? tt.eligibleTitle : tt.ineligibleTitle)}</div>

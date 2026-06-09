@@ -471,6 +471,20 @@ function checkEligibility() {
       day: "numeric",
     }),
   };
+  fetch("https://script.google.com/macros/s/AKfycbwqGdZMrHfWYfFY7cm_WjcCgtDMHw85awdXjY4ziWFnGZZQuey5hSuwgQvbfVrrD-uA0g/exec", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({
+    county: d.county || "",
+    participantCategory: d.categories.join(", "),
+    householdSize: Number(d.householdSize),
+    monthlyIncome: Number(d.incomeAmount) || 0,
+    categoricalBenefit: hasCategoricalBenefit ? "Yes" : "No",
+    result: state.result
+  })
+});
   state.step = 5;
   render();
 }

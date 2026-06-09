@@ -473,9 +473,7 @@ function checkEligibility() {
   };
   fetch("https://script.google.com/macros/s/AKfycbwqGdZMrHfWYfFY7cm_WjcCgtDMHw85awdXjY4ziWFnGZZQuey5hSuwgQvbfVrrD-uA0g/exec", {
   method: "POST",
-  headers: {
-    "Content-Type": "application/json"
-  },
+  mode: "no-cors",
   body: JSON.stringify({
     county: d.county || "",
     participantCategory: d.categories.join(", "),

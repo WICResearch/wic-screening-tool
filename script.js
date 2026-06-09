@@ -94,6 +94,7 @@ const TRANSLATIONS = {
       { id: "medicaid", label: "Medicaid or CHIP" },
       { id: "tanf", label: "TANF (Temporary Assistance for Needy Families)" },
       { id: "fdpir", label: "FDPIR (Food Distribution Program on Indian Reservations)" },
+      { id: "foster", label: "Foster child" },
       { id: "none", label: "None of the above" },
     ],
   },

@@ -871,3 +871,8 @@ details.disclosure .disclosure-body {
     border: 0;
   }
 }
+.logo-doh {
+height: 50px;
+width: auto;
+margin-right: 10px;
+}

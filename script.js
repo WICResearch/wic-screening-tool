@@ -485,7 +485,9 @@ break;
     participantCategory: d.categories.join(", "),
     householdSize: Number(d.householdSize),
     monthlyIncome: Number(d.incomeAmount) || 0,
-    categoricalBenefit: hasCategoricalBenefit ? "Yes" : "No",
+    case "semimonthly":
+monthlyIncome = monthlyIncome * 2;
+break;
     result: state.result
   })
 });

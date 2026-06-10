@@ -57,6 +57,7 @@ const TRANSLATIONS = {
     step4GuidelineYear: "Based on 2025 Federal Poverty Guidelines",
     step4Weekly: "Weekly",
     step4Biweekly: "Biweekly",
+    step4SemiMonthly: "Semi-monthly",
     step4Monthly: "Monthly",
     step4Yearly: "Yearly",
 

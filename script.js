@@ -310,6 +310,7 @@ function renderStep4() {
   const freqs = [
     ["weekly", tt.step4Weekly],
     ["biweekly", tt.step4Biweekly],
+    ["semimonthly", tt.step4SemiMonthly],
     ["monthly", tt.step4Monthly],
     ["yearly", tt.step4Yearly],
   ];
@@ -449,6 +450,10 @@ function checkEligibility() {
       break;
     case "biweekly":
       monthlyIncome = monthlyIncome * 2.16;
+      break;
+      case "semimonthly":
+monthlyIncome = monthlyIncome * 2;
+break;
       break;
     case "yearly":
       monthlyIncome = monthlyIncome / 12;

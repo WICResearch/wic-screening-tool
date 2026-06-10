@@ -454,7 +454,6 @@ function checkEligibility() {
       case "semimonthly":
 monthlyIncome = monthlyIncome * 2;
 break;
-      break;
     case "yearly":
       monthlyIncome = monthlyIncome / 12;
       break;
@@ -478,18 +477,19 @@ break;
     }),
   };
   fetch("https://script.google.com/macros/s/AKfycbwqGdZMrHfWYfFY7cm_WjcCgtDMHw85awdXjY4ziWFnGZZQuey5hSuwgQvbfVrrD-uA0g/exec", {
-  method: "POST",
-  mode: "no-cors",
-  body: JSON.stringify({
-    county: d.county || "",
-    participantCategory: d.categories.join(", "),
-    householdSize: Number(d.householdSize),
-    monthlyIncome: Number(d.incomeAmount) || 0,
-    case "semimonthly":
-monthlyIncome = monthlyIncome * 2;
-break;
-    result: state.result
-  })
+method: "POST",
+mode: "no-cors",
+body: JSON.stringify({
+county: d.county || "",
+participantCategory: d.categories.join(", "),
+householdSize: Number(d.householdSize),
+monthlyIncome: Math.round(monthlyIncome),
+categoricalBenefit: tt.benefits
+.filter(b => d.benefits.includes(b.id) && b.id !== "none")
+.map(b => b.label)
+.join(", "),
+result: state.result
+})
 });
   state.step = 5;
   render();

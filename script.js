@@ -65,7 +65,7 @@ const TRANSLATIONS = {
     disclaimer: "This screening tool is intended for informational purposes only and does not guarantee eligibility for the West Virginia WIC Program. Final eligibility is determined by WIC staff during the official certification process based on federal and state program requirements. No personally identifying information is collected or stored through this screener.",
 
     ineligibleTitle: "You may not be eligible for WIC",
-    ineligibleBody: "Based on the information provided, your household may not meet WIC income guidelines. Income is not the only factor — contact your local WIC office to confirm.",
+    ineligibleBody: "Based on the information provided, it appears you are over the income limit to receive WIC. However, income is not the only factor — contact your local WIC office to confirm.",
 
     zipTitle: "Find a WIC office near you",
     zipSubtitle: "Enter your zip code to search for nearby WIC clinics.",

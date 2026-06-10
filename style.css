@@ -99,15 +99,14 @@ img {
 display: flex;
 flex-direction: column;
 align-items: flex-end;
-gap: 0.5rem;
-flex-shrink: 0;
+gap: 6px;
 }
 
 .logo-bys {
-height: 55px;
+height: 40px;
 width: auto;
 display: block;
-margin-top: 8px;
+margin-top: 6px;
 }
 
 .header-bys {

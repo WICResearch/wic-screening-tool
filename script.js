@@ -451,19 +451,20 @@ function checkEligibility() {
   let monthlyIncome = Number(d.incomeAmount) || 0;
 
   switch (d.incomeFrequency) {
-    case "weekly":
-      monthlyIncome = monthlyIncome * 4.33;
-      break;
-    case "biweekly":
-      monthlyIncome = monthlyIncome * 2.16;
-      break;
-      case "semimonthly":
+case "weekly":
+monthlyIncome = monthlyIncome * 4.33;
+break;
+case "biweekly":
+monthlyIncome = monthlyIncome * 2.16;
+break;
+case "semimonthly":
 monthlyIncome = monthlyIncome * 2;
 break;
-    case "yearly":
-      monthlyIncome = monthlyIncome / 12;
-      break;
-  }
+case "yearly":
+monthlyIncome = monthlyIncome / 12;
+break;
+}
+
 
   const incomeEligible = monthlyIncome <= limit;
   const eligible = hasCategoricalBenefit || incomeEligible;

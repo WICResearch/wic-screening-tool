@@ -91,7 +91,7 @@ const TRANSLATIONS = {
     ],
     benefits: [
       { id: "snap", label: "SNAP (food stamps)" },
-      { id: "medicaid", label: "Medicaid or CHIP" },
+      { id: "medicaid", label: "Medicaid and CHIP Gold" },
       { id: "tanf", label: "WV WORKS (TANF)" },
       { id: "foster", label: "Foster child" },
       { id: "none", label: "None of the above" },

@@ -355,7 +355,13 @@ function renderResult() {
   const tt = t();
   const sd = state.summary;
   const isEligible = state.result === "eligible";
-  const freqLabel = { weekly: tt.step4Weekly, biweekly: tt.step4Biweekly, monthly: tt.step4Monthly, yearly: tt.step4Yearly };
+  const freqLabel = {
+weekly: tt.step4Weekly,
+biweekly: tt.step4Biweekly,
+semimonthly: tt.step4SemiMonthly,
+monthly: tt.step4Monthly,
+yearly: tt.step4Yearly
+};
   const categoryLabels = tt.categories.filter((c) => sd.categories.includes(c.id)).map((c) => c.label);
   const benefitLabels = tt.benefits.filter((b) => sd.benefits.includes(b.id) && b.id !== "none").map((b) => b.label);
 

@@ -878,3 +878,16 @@ height: 50px;
 width: auto;
 margin-right: 10px;
 }
+.header-right {
+display: flex !important;
+flex-direction: column !important;
+align-items: flex-end !important;
+gap: 8px !important;
+}
+
+.logo-bys {
+height: 40px !important;
+width: auto !important;
+display: block !important;
+margin-top: 6px !important;
+}

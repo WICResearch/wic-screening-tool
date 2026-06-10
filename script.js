@@ -444,7 +444,8 @@ function validateStep() {
 
 /* ---------- Eligibility ---------- */
 function checkEligibility() {
-  const d = state.data;
+const tt = t();
+const d = state.data;
   const selected = d.benefits || [];
   const hasCategoricalBenefit = selected.length > 0 && !selected.includes("none");
   const limit = getMonthlyIncomeLimit(Number(d.householdSize));

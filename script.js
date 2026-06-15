@@ -409,22 +409,10 @@ yearly: tt.step4Yearly
           ? `<div class="summary-list"><p class="k">${esc(tt.step3Title)}</p><ul>${benefitLabels.map((l) => `<li>${esc(l)}</li>`).join("")}</ul></div>`
           : ""
       }
-      <div class="summary-bys">
-        <span class="lbl">${esc(tt.broughtBy)}</span>
-        <img src="by-your-side-logo.png" alt="By Your Side — pregnancy to 5" />
-      </div>
-     
-<a class="btn btn-primary btn-lg btn-block"
-href="https://dhhr.wv.gov/WIC/apply/Pages/default.aspx"
-target="_blank"
-rel="noreferrer">${esc(tt.applyWVWIC)}</a>
-
-<button class="btn btn-outline btn-block" id="btn-print">${ICON.printer}${esc(tt.printSummary)}</button>
-
-<a class="btn btn-outline btn-block"
-href="https://dhhr.wv.gov/WIC/Pages/WIC-Clinics.aspx"
-target="_blank"
-rel="noreferrer">${esc(isEligible ? tt.findClinic : tt.contactClinic)}</a>
+     <div class="summary-bys">
+<span class="lbl">${esc(tt.broughtBy)}</span>
+<img src="by-your-side-logo.png" alt="By Your Side — pregnancy to 5" />
+</div>
 
 <p class="summary-foot">${esc(tt.footer)}</p>
 </div>
@@ -452,9 +440,6 @@ ${esc(isEligible ? tt.findClinic : tt.contactClinic)}
 ${esc(tt.startOver)}
 </button>
 </div>
-
-    <div class="info-box info-muted small">${ICON.help}<p>${esc(tt.disclaimer)}</p></div>
-  </div>`;
 }
 
 /* ---------- Validation ---------- */

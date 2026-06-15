@@ -417,7 +417,7 @@ yearly: tt.step4Yearly
     </div>
 
     <div class="actions">
-      <a class="btn btn-primary btn-lg btn-block" href="https://dhhr.wv.gov/wic/Pages/default.aspx" target="_blank" rel="noreferrer">${esc(tt.applyWVWIC)}</a>
+      <a class="btn btn-primary btn-lg btn-block" href="https://dhhr.wv.gov/WIC/apply/Pages/default.aspx" target="_blank" rel="noreferrer">${esc(tt.applyWVWIC)}</a>
       <button class="btn btn-outline btn-block" id="btn-print">${ICON.printer}${esc(tt.printSummary)}</button>
     <a class="btn btn-outline btn-block"
 href="https://dhhr.wv.gov/WIC/Pages/WIC-Clinics.aspx"

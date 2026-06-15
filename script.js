@@ -26,7 +26,7 @@ const TRANSLATIONS = {
     findClinic: "Find your local WIC office",
     contactClinic: "Contact local WIC office",
     applyWVWIC: "Apply for WV WIC",
-    ooter: "This tool provides a preliminary screening only. WIC eligibility is determined by your local WIC agency. WIC is funded through the United States Department of Agriculture Food and Nutrition Service (USDA FNS). USDA is an equal opportunity provider and employer.",
+    footer: "This tool provides a preliminary screening only. WIC eligibility is determined by your local WIC agency. WIC is funded through the United States Department of Agriculture Food and Nutrition Service (USDA FNS). USDA is an equal opportunity provider and employer.",
 
     step1Title: "Who is applying?",
     step1Subtitle: "Select everyone in your household who needs WIC.",
@@ -413,10 +413,7 @@ yearly: tt.step4Yearly
         <span class="lbl">${esc(tt.broughtBy)}</span>
         <img src="by-your-side-logo.png" alt="By Your Side — pregnancy to 5" />
       </div>
-      <p class="summary-foot">${esc(tt.footer)}</p>
-    </div>
-
-    <div class="actions">
+     
 <a class="btn btn-primary btn-lg btn-block"
 href="https://dhhr.wv.gov/WIC/apply/Pages/default.aspx"
 target="_blank"
@@ -454,10 +451,6 @@ ${esc(isEligible ? tt.findClinic : tt.contactClinic)}
 <button class="btn btn-ghost btn-block" id="btn-reset">
 ${esc(tt.startOver)}
 </button>
-</div>
-
-<div class="info-box info-muted small">
-${ICON.help}<p>${esc(tt.disclaimer)}</p>
 </div>
 
     <div class="info-box info-muted small">${ICON.help}<p>${esc(tt.disclaimer)}</p></div>

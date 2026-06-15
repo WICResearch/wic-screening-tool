@@ -26,7 +26,7 @@ const TRANSLATIONS = {
     findClinic: "Find your local WIC office",
     contactClinic: "Contact local WIC office",
     applyWVWIC: "Apply for WV WIC",
-    footer: "This tool provides a preliminary screening only. WIC eligibility is determined by your local WIC agency.",
+    ooter: "This tool provides a preliminary screening only. WIC eligibility is determined by your local WIC agency. WIC is funded through the United States Department of Agriculture Food and Nutrition Service (USDA FNS). USDA is an equal opportunity provider and employer.",
 
     step1Title: "Who is applying?",
     step1Subtitle: "Select everyone in your household who needs WIC.",

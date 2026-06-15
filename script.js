@@ -429,10 +429,36 @@ href="https://dhhr.wv.gov/WIC/Pages/WIC-Clinics.aspx"
 target="_blank"
 rel="noreferrer">${esc(isEligible ? tt.findClinic : tt.contactClinic)}</a>
 
-<button class="btn btn-ghost btn-block" id="btn-reset">${esc(tt.startOver)}</button>
+<p class="summary-foot">${esc(tt.footer)}</p>
 </div>
-      <button class="btn btn-ghost btn-block" id="btn-reset">${esc(tt.startOver)}</button>
-    </div>
+
+<div class="actions">
+<a class="btn btn-primary btn-lg btn-block"
+href="https://dhhr.wv.gov/WIC/apply/Pages/default.aspx"
+target="_blank"
+rel="noreferrer">
+${esc(tt.applyWVWIC)}
+</a>
+
+<button class="btn btn-outline btn-block" id="btn-print">
+${ICON.printer}${esc(tt.printSummary)}
+</button>
+
+<a class="btn btn-outline btn-block"
+href="https://dhhr.wv.gov/WIC/Pages/WIC-Clinics.aspx"
+target="_blank"
+rel="noreferrer">
+${esc(isEligible ? tt.findClinic : tt.contactClinic)}
+</a>
+
+<button class="btn btn-ghost btn-block" id="btn-reset">
+${esc(tt.startOver)}
+</button>
+</div>
+
+<div class="info-box info-muted small">
+${ICON.help}<p>${esc(tt.disclaimer)}</p>
+</div>
 
     <div class="info-box info-muted small">${ICON.help}<p>${esc(tt.disclaimer)}</p></div>
   </div>`;

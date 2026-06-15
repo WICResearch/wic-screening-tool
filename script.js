@@ -518,7 +518,7 @@ function handleZipSearch() {
     return;
   }
   state.zipError = false;
-  window.open(`https://www.google.com/maps/search/WIC+clinic+near+${encodeURIComponent(zip)}`, "_blank", "noreferrer");
+  window.open("https://www.wvdhhr.org/ons/clinics.asp", "_blank", "noreferrer");
 }
 
 /* ---------- Render ---------- */

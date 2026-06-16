@@ -352,64 +352,70 @@ function renderStep4() {
 }
 
 function renderResult() {
-  const tt = t();
-  const sd = state.summary;
-  const isEligible = state.result === "eligible";
-  const freqLabel = {
+const tt = t();
+const sd = state.summary;
+const isEligible = state.result === "eligible";
+const freqLabel = {
 weekly: tt.step4Weekly,
 biweekly: tt.step4Biweekly,
 semimonthly: tt.step4SemiMonthly,
 monthly: tt.step4Monthly,
 yearly: tt.step4Yearly
 };
-  const categoryLabels = tt.categories.filter((c) => sd.categories.includes(c.id)).map((c) => c.label);
-  const benefitLabels = tt.benefits.filter((b) => sd.benefits.includes(b.id) && b.id !== "none").map((b) => b.label);
 
-  return `<div class="result">
-    <div class="result-head">
-      <div class="result-badge ${isEligible ? "eligible" : "ineligible"}">${isEligible ? ICON.check : ICON.infoLg}</div>
-      <h2 class="result-title ${isEligible ? "eligible" : ""}">${esc(isEligible ? tt.eligibleTitle : tt.ineligibleTitle)}</h2>
-      <p class="result-body">${esc(isEligible ? tt.eligibleBody : tt.ineligibleBody)}</p>
-    </div>
+const categoryLabels = tt.categories.filter((c) => sd.categories.includes(c.id)).map((c) => c.label);
+const benefitLabels = tt.benefits.filter((b) => sd.benefits.includes(b.id) && b.id !== "none").map((b) => b.label);
 
-    <div class="zip-box">
-      <div class="zip-head">
-        ${ICON.mapPin}
-        <div>
-          <p class="zip-title">${esc(tt.zipTitle)}</p>
-          <p class="zip-sub">${esc(tt.zipSubtitle)}</p>
-        </div>
-      </div>
-      <div class="zip-row">
-        <input class="input" id="zip" type="text" inputmode="numeric" maxlength="5" placeholder="${esc(tt.zipPlaceholder)}" />
-        <button class="btn btn-primary" id="btn-zip">${ICON.search}${esc(tt.zipButton)}</button>
-      </div>
-      ${state.zipError ? `<p class="error small" id="zip-error">${esc(tt.zipError)}</p>` : ""}
-    </div>
+return `<div class="result">
+<div class="result-head">
+<div class="result-badge ${isEligible ? "eligible" : "ineligible"}">${isEligible ? ICON.check : ICON.infoLg}</div>
+<h2 class="result-title ${isEligible ? "eligible" : ""}">${esc(isEligible ? tt.eligibleTitle : tt.ineligibleTitle)}</h2>
+<p class="result-body">${esc(isEligible ? tt.eligibleBody : tt.ineligibleBody)}</p>
+</div>
 
-    <div class="summary">
-      <div class="summary-top">
-        <div class="brand"><img src="wic logo .png"alt="WIC logo" /><span>${esc(tt.appTitle)}</span></div>
-        <span class="summary-date">${esc(sd.screenedAt)}</span>
-      </div>
-      <div class="summary-verdict ${isEligible ? "eligible" : "ineligible"}">${esc(isEligible ? tt.eligibleTitle : tt.ineligibleTitle)}</div>
-      <div class="summary-grid">
-        <div><p class="k">${esc(tt.step2Title)}</p><p class="v">${esc(sd.householdSize)}</p></div>
-        <div><p class="k">${esc(tt.step4Amount)}</p><p class="v">$${sd.incomeAmount.toLocaleString()} / ${esc(freqLabel[sd.incomeFrequency])}</p></div>
-        <div><p class="k">${esc(tt.estMonthly)}</p><p class="v">$${Math.round(sd.monthlyIncome).toLocaleString()}</p></div>
-        <div><p class="k">${esc(tt.wicLimit)}</p><p class="v">$${sd.incomeLimit.toLocaleString()}</p></div>
-      </div>
-      ${
-        categoryLabels.length
-          ? `<div class="summary-list"><p class="k">${esc(tt.step1Title)}</p><ul>${categoryLabels.map((l) => `<li>${esc(l)}</li>`).join("")}</ul></div>`
-          : ""
-      }
-      ${
-        benefitLabels.length
-          ? `<div class="summary-list"><p class="k">${esc(tt.step3Title)}</p><ul>${benefitLabels.map((l) => `<li>${esc(l)}</li>`).join("")}</ul></div>`
-          : ""
-      }
-     <div class="summary-bys">
+<div class="zip-box">
+<div class="zip-head">
+${ICON.mapPin}
+<div>
+<p class="zip-title">${esc(tt.zipTitle)}</p>
+<p class="zip-sub">${esc(tt.zipSubtitle)}</p>
+</div>
+</div>
+<div class="zip-row">
+<input class="input" id="zip" type="text" inputmode="numeric" maxlength="5" placeholder="${esc(tt.zipPlaceholder)}" />
+<button class="btn btn-primary" id="btn-zip">${ICON.search}${esc(tt.zipButton)}</button>
+</div>
+${state.zipError ? `<p class="error small" id="zip-error">${esc(tt.zipError)}</p>` : ""}
+</div>
+
+<div class="summary">
+<div class="summary-top">
+<div class="brand"><img src="wic logo .png" alt="WIC logo" /><span>${esc(tt.appTitle)}</span></div>
+<span class="summary-date">${esc(sd.screenedAt)}</span>
+</div>
+
+<div class="summary-verdict ${isEligible ? "eligible" : "ineligible"}">${esc(isEligible ? tt.eligibleTitle : tt.ineligibleTitle)}</div>
+
+<div class="summary-grid">
+<div><p class="k">${esc(tt.step2Title)}</p><p class="v">${esc(sd.householdSize)}</p></div>
+<div><p class="k">${esc(tt.step4Amount)}</p><p class="v">$${sd.incomeAmount.toLocaleString()} / ${esc(freqLabel[sd.incomeFrequency])}</p></div>
+<div><p class="k">${esc(tt.estMonthly)}</p><p class="v">$${Math.round(sd.monthlyIncome).toLocaleString()}</p></div>
+<div><p class="k">${esc(tt.wicLimit)}</p><p class="v">$${sd.incomeLimit.toLocaleString()}</p></div>
+</div>
+
+${
+categoryLabels.length
+? `<div class="summary-list"><p class="k">${esc(tt.step1Title)}</p><ul>${categoryLabels.map((l) => `<li>${esc(l)}</li>`).join("")}</ul></div>`
+: ""
+}
+
+${
+benefitLabels.length
+? `<div class="summary-list"><p class="k">${esc(tt.step3Title)}</p><ul>${benefitLabels.map((l) => `<li>${esc(l)}</li>`).join("")}</ul></div>`
+: ""
+}
+
+<div class="summary-bys">
 <span class="lbl">${esc(tt.broughtBy)}</span>
 <img src="by-your-side-logo.png" alt="By Your Side — pregnancy to 5" />
 </div>
@@ -421,25 +427,20 @@ yearly: tt.step4Yearly
 <a class="btn btn-primary btn-lg btn-block"
 href="https://dhhr.wv.gov/WIC/apply/Pages/default.aspx"
 target="_blank"
-rel="noreferrer">
-${esc(tt.applyWVWIC)}
-</a>
+rel="noreferrer">${esc(tt.applyWVWIC)}</a>
 
-<button class="btn btn-outline btn-block" id="btn-print">
-${ICON.printer}${esc(tt.printSummary)}
-</button>
+<button class="btn btn-outline btn-block" id="btn-print">${ICON.printer}${esc(tt.printSummary)}</button>
 
 <a class="btn btn-outline btn-block"
 href="https://dhhr.wv.gov/WIC/Pages/WIC-Clinics.aspx"
 target="_blank"
-rel="noreferrer">
-${esc(isEligible ? tt.findClinic : tt.contactClinic)}
-</a>
+rel="noreferrer">${esc(isEligible ? tt.findClinic : tt.contactClinic)}</a>
 
-<button class="btn btn-ghost btn-block" id="btn-reset">
-${esc(tt.startOver)}
-</button>
+<button class="btn btn-ghost btn-block" id="btn-reset">${esc(tt.startOver)}</button>
 </div>
+
+<div class="info-box info-muted small">${ICON.help}<p>${esc(tt.disclaimer)}</p></div>
+</div>`;
 }
 
 /* ---------- Validation ---------- */

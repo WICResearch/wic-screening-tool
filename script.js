@@ -508,7 +508,7 @@ county: d.county || "",
 participantCategory: d.categories.join(", "),
 householdSize: Number(d.householdSize),
 monthlyIncome: Math.round(monthlyIncome),
-incomeFrequency: d.incomeFrequency,
+incomeFrequency: d.incomeFrequency || "",
 categoricalBenefit: tt.benefits
 .filter(b => d.benefits.includes(b.id) && b.id !== "none")
 .map(b => b.label)

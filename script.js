@@ -500,7 +500,7 @@ break;
       day: "numeric",
     }),
   };
-  fetch("https://script.google.com/macros/s/AKfycbwqGdZMrHfWYfFY7cm_WjcCgtDMHw85awdXjY4ziWFnGZZQuey5hSuwgQvbfVrrD-uA0g/exec", {
+  fetch("https://script.google.com/macros/s/AKfycby3xN_kXR32v-Zj2XU3qoqk5r0n_roWuwvgeJ31UFh8nkhbRmSB6gufF1d5ZbQ-1Bh3mg/exec", {
 method: "POST",
 mode: "no-cors",
 body: JSON.stringify({

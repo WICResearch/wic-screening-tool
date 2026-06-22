@@ -91,11 +91,13 @@ const TRANSLATIONS = {
       { id: "child", label: "Child (under 5 years old)" },
     ],
     benefits: [
-      { id: "snap", label: "SNAP (food stamps)" },
-      { id: "medicaid", label: "Medicaid and CHIP Gold" },
-      { id: "tanf", label: "WV WORKS (TANF)" },
-      { id: "foster", label: "Foster child" },
-      { id: "none", label: "None of the above" },
+{ id: "snap", label: "SNAP (food stamps)" },
+{ id: "medicaid", label: "Medicaid" },
+{ id: "chip", label: "CHIP Gold" },
+{ id: "tanf", label: "WV WORKS (TANF)" },
+{ id: "foster", label: "Foster child" },
+{ id: "none", label: "None of the above" },
+],
     ],
   },
   es: {

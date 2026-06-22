@@ -896,11 +896,9 @@ margin: 30px auto;
 height: 60px;
 width: auto;
 }
-.language-toggle {
-position: absolute;
-top: 15px;
-right: 20px;
+.lang-toggle {
 display: flex;
+align-items: center;
 gap: 6px;
 background: white;
 border: 2px solid #005ea8;

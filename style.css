@@ -897,6 +897,17 @@ margin: 30px auto;
 height: 60px;
 width: auto;
 }
+.site-header {
+position: sticky;
+}
+
+.header-right {
+position: absolute !important;
+top: 18px !important;
+right: 24px !important;
+margin-left: 0 !important;
+}
+
 .lang-toggle {
 display: flex;
 align-items: center;
@@ -907,8 +918,5 @@ border-radius: 999px;
 padding: 4px;
 box-shadow: 0 3px 8px rgba(0,0,0,.2);
 z-index: 100;
-transform: translateX(110px);
 }
-.header-right .lang-toggle {
-transform: translateX(160px) !important;
-}
+

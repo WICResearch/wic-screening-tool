@@ -98,7 +98,6 @@ const TRANSLATIONS = {
 { id: "foster", label: "Foster child" },
 { id: "none", label: "None of the above" },
 ],
-    ],
   },
   es: {
     appTitle: "Verificador de Elegibilidad WIC",

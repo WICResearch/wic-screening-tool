@@ -533,7 +533,7 @@ function handleZipSearch() {
     return;
   }
   state.zipError = false;
-  window.open("https://www.wvdhhr.org/ons/clinics.asp", "_blank", "noreferrer");
+  window.open("https://dhhr.wv.gov/WIC/pages/Clinic-Results.aspx", "_blank", "noreferrer");
 }
 
 /* ---------- Render ---------- */
